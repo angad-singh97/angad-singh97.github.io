@@ -27,11 +27,15 @@ branch.predict();</pre>
       <section class="mb-10 sm:mb-12 flex flex-row items-start gap-4 sm:gap-6 animate-in-up animate-delay-1">
         <div class="flex-shrink-0">
           <img
+            id="profile-photo"
             src={profileImg}
             alt="Angad Singh"
             width="160"
             height="213"
-            class="photo-fun rounded-xl border border-muted-gray/40 w-24 h-auto object-cover sm:w-36"
+            class="photo-fun rounded-xl border border-muted-gray/40 w-24 h-auto object-cover sm:w-36 cursor-pointer select-none"
+            tabindex="0"
+            role="button"
+            aria-label="Profile photo"
           />
         </div>
         <div class="flex-1 min-w-0">
@@ -231,5 +235,42 @@ branch.predict();</pre>
         </footer>
       </section>
     </div>
+    <!-- Gohan Easter egg overlay (3 clicks on profile photo) -->
+    <div id="gohan-overlay" class="gohan-overlay" aria-hidden="true" hidden>
+      <div class="gohan-aura" />
+      <div class="gohan-beam" />
+      <div class="gohan-content">
+        <span class="gohan-text">GOHAN</span>
+        <span class="gohan-sub">— it's over 9000 —</span>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function() {
+        var el = document.getElementById('profile-photo');
+        var overlay = document.getElementById('gohan-overlay');
+        if (!el || !overlay) return;
+        var count = 0;
+        var resetAt = 0;
+        var RESET_MS = 1500;
+        function onClick() {
+          var now = Date.now();
+          if (now > resetAt) { count = 0; }
+          count++;
+          resetAt = now + RESET_MS;
+          if (count >= 3) {
+            count = 0;
+            overlay.hidden = false;
+            overlay.classList.add('gohan-overlay--active');
+            setTimeout(function() {
+              overlay.classList.remove('gohan-overlay--active');
+              overlay.hidden = true;
+            }, 4200);
+          }
+        }
+        el.addEventListener('click', onClick);
+        el.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } });
+      })();
+    </script>
   </main>
 </BaseLayout>
