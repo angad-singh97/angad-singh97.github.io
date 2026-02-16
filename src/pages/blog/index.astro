@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+---
+
+<BaseLayout
+  title="Deep Dives | Angad Singh"
+  description="Technical write-ups on systems programming, RISC-V, DPDK, memory models, and low-level engineering."
+>
+  <main class="max-w-3xl mx-auto px-6 py-16 sm:py-24">
+    <header class="mb-12">
+      <a href="/" class="text-muted-gray hover:text-terminal-green text-sm mb-6 inline-block">← Back</a>
+      <h1 class="text-2xl font-bold text-white tracking-tight">Deep Dives</h1>
+      <p class="text-muted-gray-light mt-2">Technical write-ups on systems, memory models, and low-level engineering.</p>
+    </header>
+
+    <ul class="space-y-6">
+      {
+        (await getCollection('blog'))
+          .filter((post) => !post.data.draft)
+          .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+          .map((post: CollectionEntry<'blog'>) => (
+            <li>
+              <a
+                href={`/blog/${post.slug}`}
+                class="block p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-terminal-green/30 hover:text-terminal-green transition-colors"
+              >
+                <h2 class="text-lg font-semibold text-white mb-1">{post.data.title}</h2>
+                <p class="text-sm text-muted-gray-light">{post.data.description}</p>
+                <time class="text-xs text-muted-gray mt-2 block" datetime={post.data.pubDate.toISOString()}>
+                  {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </a>
+            </li>
+          ))
+      }
+    </ul>
+  </main>
+</BaseLayout>

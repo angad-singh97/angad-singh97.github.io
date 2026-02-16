@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Angad Singh | Systems Engineer"
+  description="Systems Engineer specializing in High-Performance Networking and Kernel Bypass. Combining deep academic research in DPDK/RISC-V with 4+ years of industry experience."
+>
+  <main class="max-w-3xl mx-auto px-6 py-16 sm:py-24">
+    <!-- Hero -->
+    <section class="mb-16">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
+        Angad Singh <span class="text-muted-gray">|</span> Systems Engineer
+      </h1>
+      <p class="text-lg text-muted-gray-light leading-relaxed max-w-2xl">
+        Systems Engineer specializing in High-Performance Networking and Kernel Bypass. Combining deep academic research in DPDK/RISC-V with 4+ years of industry experience.
+      </p>
+
+      <!-- Quick Links -->
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a
+          href="https://github.com/angad-singh97"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded border border-muted-gray/50 hover:border-terminal-green/50 hover:text-terminal-green transition-colors"
+          aria-label="GitHub"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          GitHub
+        </a>
+        <a
+          href="https://linkedin.com/in/angad-sde-nyc"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded border border-muted-gray/50 hover:border-terminal-green/50 hover:text-terminal-green transition-colors"
+          aria-label="LinkedIn"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a
+          href="/resume.pdf"
+          download
+          class="inline-flex items-center gap-2 px-4 py-2 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30 hover:bg-terminal-green/30 transition-colors"
+          aria-label="Download Resume"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-20">
+      <h2 class="text-xl font-semibold text-white mb-6 tracking-tight">Featured Projects</h2>
+      <div class="grid gap-6 sm:grid-cols-1">
+        <!-- User-Space Networking -->
+        <article class="p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/30 transition-colors">
+          <h3 class="text-lg font-semibold text-cpp-blue mb-2">
+            <a href="https://github.com/angad-singh97/riscv-network-stack" target="_blank" rel="noopener noreferrer" class="hover:underline">
+              User-Space Networking on RISC-V
+            </a>
+          </h3>
+          <p class="text-sm text-muted-gray-light mb-3">
+            Custom DPDK Poll Mode Driver (PMD) for a proprietary FPGA NIC. Resolved critical race conditions on RISC-V's weak memory model by injecting assembly <code class="text-terminal-green px-1 rounded bg-charcoal">FENCE</code> instructions. Zero-copy DMA via Hugepages and vfio-platform.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">C</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">RISC-V</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">DPDK</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">F-Stack</span>
+          </div>
+        </article>
+
+        <!-- RV64IM CPU -->
+        <article class="p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/30 transition-colors">
+          <h3 class="text-lg font-semibold text-cpp-blue mb-2">
+            <a href="https://github.com/angad-singh97/riscv-core-verilog" target="_blank" rel="noopener noreferrer" class="hover:underline">
+              5-Stage RISC-V CPU (RV64IM)
+            </a>
+          </h3>
+          <p class="text-sm text-muted-gray-light mb-3">
+            Full RV64IM implementation with 5-stage pipeline. Data Forwarding Unit for RAW hazard resolution without stalling. 2-bit dynamic branch predictor to minimize control penalties. 2-way set-associative cache (write-back, write-allocate).
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">SystemVerilog</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">Verilator</span>
+          </div>
+        </article>
+
+        <!-- LuigiDB -->
+        <article class="p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/30 transition-colors">
+          <h3 class="text-lg font-semibold text-cpp-blue mb-2">
+            <a href="https://github.com/angad-singh97/luigi-db" target="_blank" rel="noopener noreferrer" class="hover:underline">
+              LuigiDB — Geo-Distributed Transactions
+            </a>
+          </h3>
+          <p class="text-sm text-muted-gray-light mb-3">
+            Timestamp-ordered execution with a 2-WRTT commit bound. 30–60× higher throughput than OCC in multi-shard geo setups. Built on Mako (OSDI'25). TPC-C benchmarks on cloud infrastructure with simulated network latency.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">C++</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">Mako</span>
+          </div>
+        </article>
+
+        <!-- Raft & Paxos (from GitHub) -->
+        <article class="p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/30 transition-colors">
+          <h3 class="text-lg font-semibold text-cpp-blue mb-2">
+            <a href="https://github.com/angad-singh97" target="_blank" rel="noopener noreferrer" class="hover:underline">
+              More on GitHub
+            </a>
+          </h3>
+          <p class="text-sm text-muted-gray-light mb-3">
+            Raft consensus in C++, Paxos-based distributed transactions in Java, SBUnix (Unix-like OS) — and more. <a href="https://github.com/angad-singh97" class="text-terminal-green hover:underline">View all 25 repos</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Deep Dives CTA -->
+    <section>
+      <h2 class="text-xl font-semibold text-white mb-6 tracking-tight">Deep Dives</h2>
+      <p class="text-muted-gray-light mb-4">
+        Technical write-ups on systems, memory models, and low-level engineering.
+      </p>
+      <a
+        href="/blog"
+        class="inline-flex items-center gap-2 text-terminal-green hover:underline"
+      >
+        Read the blog →
+      </a>
+    </section>
+  </main>
+</BaseLayout>

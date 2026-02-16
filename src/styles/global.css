@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply text-base leading-relaxed;
+  }
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* KaTeX overrides for dark theme */
+.katex {
+  font-size: 1.1em !important;
+}
+.katex-display {
+  @apply text-muted-gray-light overflow-x-auto overflow-y-hidden py-4;
+}
