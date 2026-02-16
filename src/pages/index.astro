@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+// Cache-bust so updated images aren’t served from browser/GitHub Pages cache
+const profileImg = '/angad.png?v=' + Date.now();
 ---
 
 <BaseLayout
@@ -27,7 +29,7 @@ branch.predict();</pre>
     <section class="mb-8 flex flex-col sm:flex-row sm:items-start gap-6">
       <div class="flex-shrink-0 animate-in-up animate-delay-1">
         <img
-          src="/angad.png"
+          src={profileImg}
           alt="Angad Singh"
           width="160"
           height="213"
