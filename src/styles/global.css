@@ -8,19 +8,31 @@
   }
   body {
     @apply text-base leading-relaxed;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
   }
   a {
     @apply transition-colors duration-200;
   }
 }
 
-/* Background grid pattern for side space */
+/* Gradient mesh background */
+.bg-mesh {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(78, 201, 176, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(167, 139, 250, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 60%, rgba(34, 211, 238, 0.06), transparent),
+    #0f0f12;
+}
+
+/* Background grid pattern */
 .bg-grid-pattern {
   background-image:
-    linear-gradient(rgba(78, 201, 176, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(78, 201, 176, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-  animation: grid-drift 20s linear infinite;
+    linear-gradient(rgba(78, 201, 176, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 201, 176, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-drift 25s linear infinite;
 }
 
 @keyframes grid-drift {
@@ -96,6 +108,25 @@
 }
 .btn-pop:active {
   transform: scale(0.98);
+}
+
+/* Touch-friendly: min 44px tap targets on touch devices */
+@media (pointer: coarse) {
+  .btn-pop,
+  .hover-lift {
+    min-height: 44px;
+  }
+  .btn-pop {
+    @apply min-h-touch flex items-center justify-center;
+  }
+}
+
+/* Section header with colored accent */
+.section-head {
+  @apply font-display font-bold tracking-tight text-white;
+}
+.section-head-accent {
+  @apply bg-gradient-to-r from-terminal-green via-accent-cyan to-accent-violet bg-clip-text text-transparent;
 }
 
 /* KaTeX overrides for dark theme */
