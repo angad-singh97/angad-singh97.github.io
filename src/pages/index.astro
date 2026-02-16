@@ -9,44 +9,56 @@ const profileImg = '/angad.png?v=' + Date.now();
 >
   <main class="relative min-h-screen bg-mesh">
     <div class="fixed inset-0 bg-grid-pattern pointer-events-none" aria-hidden="true" />
+    <!-- Side decorations — desktop only -->
+    <div class="fixed left-4 top-1/4 hidden xl:block text-muted-gray/25 text-xs font-mono max-w-[160px] pointer-events-none select-none" aria-hidden="true">
+      <pre class="leading-relaxed">// user-space
+dpdk_pmd_init();
+fence(w, o);
+doorbell_write();</pre>
+    </div>
+    <div class="fixed right-4 top-1/3 hidden xl:block text-muted-gray/25 text-xs font-mono max-w-[160px] pointer-events-none select-none text-right" aria-hidden="true">
+      <pre class="leading-relaxed">RV64IM pipeline:
+IF → ID → EX → MEM → WB
+branch.predict();</pre>
+    </div>
 
-    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10 lg:px-10 pt-[env(safe-area-inset-top)]">
-      <!-- Hero -->
-      <section class="mb-10 sm:mb-12 flex flex-col sm:flex-row sm:items-start gap-6 animate-in-up animate-delay-1">
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10 lg:px-12 xl:max-w-5xl xl:px-16 pt-[env(safe-area-inset-top)]">
+      <!-- Hero: image left, text wraps next to it on all sizes -->
+      <section class="mb-10 sm:mb-12 flex flex-row items-start gap-4 sm:gap-6 animate-in-up animate-delay-1">
         <div class="flex-shrink-0">
           <img
             src={profileImg}
             alt="Angad Singh"
             width="160"
             height="213"
-            class="photo-fun rounded-2xl border-2 border-terminal-green/30 w-32 h-auto object-cover shadow-lg shadow-terminal-green/10 sm:w-36"
+            class="photo-fun rounded-xl border border-muted-gray/40 w-24 h-auto object-cover sm:w-36"
           />
         </div>
         <div class="flex-1 min-w-0">
-          <h1 class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-2 animate-in-up animate-delay-2">
+          <h1 class="font-display font-bold text-xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-1.5 sm:mb-2 animate-in-up animate-delay-2">
             Angad Singh <span class="text-muted-gray font-mono font-normal">|</span> Systems Engineer
           </h1>
-          <p class="font-display font-semibold text-terminal-green text-lg sm:text-xl mb-2 animate-in-up animate-delay-2">
+          <p class="font-display font-semibold text-terminal-green text-base sm:text-xl mb-1.5 sm:mb-2 animate-in-up animate-delay-2">
             Building at the Hardware-Software Boundary.
           </p>
-          <p class="text-sm sm:text-base text-muted-gray-light leading-relaxed max-w-2xl mb-4 animate-in-up animate-delay-3">
-            Currently pursuing an <strong class="text-white">MSCS at Stony Brook University</strong>, specializing in <strong class="text-accent-cyan">High-Performance Networking</strong>, <strong class="text-terminal-green">Kernel Bypass</strong>, and <strong class="text-accent-violet">Computer Architecture</strong>.
+          <p class="text-sm sm:text-base text-muted-gray-light leading-snug sm:leading-relaxed max-w-2xl mb-3 sm:mb-4 animate-in-up animate-delay-3">
+            Currently pursuing an <strong class="text-white">MSCS at Stony Brook University</strong>, specializing in <strong class="text-muted-gray-light">High-Performance Networking</strong>, <strong class="text-terminal-green">Kernel Bypass</strong>, and <strong class="text-muted-gray-light">Computer Architecture</strong>.
           </p>
-          <div class="flex flex-wrap gap-3 animate-in-up animate-delay-4">
-            <a href="https://github.com/angad-singh97" target="_blank" rel="noopener noreferrer" class="btn-pop inline-flex items-center gap-2 px-4 py-3 rounded-xl border-2 border-muted-gray/40 hover:border-accent-cyan hover:text-accent-cyan hover:bg-accent-cyan/5 min-h-touch sm:min-h-0" aria-label="GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          <div class="flex flex-wrap gap-2 sm:gap-3 animate-in-up animate-delay-4">
+            <a href="https://github.com/angad-singh97" target="_blank" rel="noopener noreferrer" class="btn-pop inline-flex items-center gap-2 px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg border border-muted-gray/40 hover:border-terminal-green/50 hover:text-terminal-green min-h-touch sm:min-h-0 text-sm sm:text-base" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
               GitHub
             </a>
-            <a href="https://linkedin.com/in/angad-sde-nyc" target="_blank" rel="noopener noreferrer" class="btn-pop inline-flex items-center gap-2 px-4 py-3 rounded-xl border-2 border-muted-gray/40 hover:border-accent-cyan hover:text-accent-cyan hover:bg-accent-cyan/5 min-h-touch sm:min-h-0" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <a href="https://linkedin.com/in/angad-sde-nyc" target="_blank" rel="noopener noreferrer" class="btn-pop inline-flex items-center gap-2 px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg border border-muted-gray/40 hover:border-terminal-green/50 hover:text-terminal-green min-h-touch sm:min-h-0 text-sm sm:text-base" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
               LinkedIn
             </a>
-            <a href="mailto:angadsdenyc@gmail.com" class="btn-pop inline-flex items-center gap-2 px-4 py-3 rounded-xl border-2 border-muted-gray/40 hover:border-accent-lime hover:text-accent-lime hover:bg-accent-lime/5 min-h-touch sm:min-h-0" aria-label="Email">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:angadsdenyc@gmail.com" class="btn-pop inline-flex items-center gap-2 px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg border border-muted-gray/40 hover:border-terminal-green/50 hover:text-terminal-green min-h-touch sm:min-h-0 text-sm sm:text-base" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Email
             </a>
-            <a href="/resume.pdf" download class="btn-pop inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-terminal-green/20 text-terminal-green border-2 border-terminal-green/40 hover:bg-terminal-green/30 hover:border-terminal-green min-h-touch sm:min-h-0" aria-label="Download Resume">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            <a href="/resume.pdf" download class="btn-pop inline-flex items-center gap-2 px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-terminal-green/15 text-terminal-green border border-terminal-green/30 hover:bg-terminal-green/25 min-h-touch sm:min-h-0 text-sm sm:text-base" aria-label="Download Resume">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
               Resume
             </a>
           </div>
@@ -55,35 +67,35 @@ const profileImg = '/angad.png?v=' + Date.now();
 
       <!-- Core Engineering Focus -->
       <section class="mb-10 sm:mb-12 animate-in-up animate-delay-2">
-        <h2 class="section-head text-lg sm:text-xl mb-4 flex items-center gap-2">
-          <span class="text-accent-amber">🔧</span> Core Engineering Focus
+        <h2 class="section-head text-lg sm:text-xl mb-4 flex items-center gap-2 text-white">
+          <span aria-hidden="true">🔧</span> Core Engineering Focus
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-          <div class="rounded-xl border-2 border-cpp-blue/30 bg-charcoal-card/80 p-4 backdrop-blur-sm">
-            <h3 class="text-cpp-blue font-semibold text-sm mb-2">Systems Programming</h3>
+          <div class="rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 backdrop-blur-sm">
+            <h3 class="text-muted-gray-light font-semibold text-sm mb-2">Systems Programming</h3>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/40">C</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-tag-amber/20 text-tag-amber border border-tag-amber/40">C++20</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-terminal-green/20 text-terminal-green border border-terminal-green/40">RISC-V ASM</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-tag-orange/20 text-tag-orange border border-tag-orange/40">SystemVerilog</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">C</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">C++20</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">RISC-V ASM</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">SystemVerilog</span>
             </div>
           </div>
-          <div class="rounded-xl border-2 border-terminal-green/30 bg-charcoal-card/80 p-4 backdrop-blur-sm">
-            <h3 class="text-terminal-green font-semibold text-sm mb-2">Networking</h3>
+          <div class="rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 backdrop-blur-sm">
+            <h3 class="text-muted-gray-light font-semibold text-sm mb-2">Networking</h3>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-tag-amber/20 text-tag-amber border border-tag-amber/40">DPDK</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-terminal-green/20 text-terminal-green border border-terminal-green/40">Kernel Bypass</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-tag-cyan/20 text-tag-cyan border border-tag-cyan/40">TCP/IP</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-accent-cyan/20 text-accent-cyan border border-accent-cyan/40">Zero-Copy DMA</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">DPDK</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Kernel Bypass</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">TCP/IP</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Zero-Copy DMA</span>
             </div>
           </div>
-          <div class="rounded-xl border-2 border-accent-violet/30 bg-charcoal-card/80 p-4 backdrop-blur-sm">
-            <h3 class="text-accent-violet font-semibold text-sm mb-2">Architecture</h3>
+          <div class="rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 backdrop-blur-sm">
+            <h3 class="text-muted-gray-light font-semibold text-sm mb-2">Architecture</h3>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-tag-purple/20 text-tag-purple border border-tag-purple/40">MESI</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-tag-pink/20 text-tag-pink border border-tag-pink/40">Pipelining</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-accent-coral/20 text-accent-coral border border-accent-coral/40">Weak Memory</span>
-              <span class="text-xs px-2.5 py-1 rounded-lg bg-accent-amber/20 text-accent-amber border border-accent-amber/40">Branch Prediction</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">MESI</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Pipelining</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Weak Memory</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Branch Prediction</span>
             </div>
           </div>
         </div>
@@ -91,98 +103,92 @@ const profileImg = '/angad.png?v=' + Date.now();
 
       <!-- Featured Research & Projects -->
       <section class="mb-10 sm:mb-12 animate-in-up animate-delay-3">
-        <h2 class="section-head text-lg sm:text-xl mb-4 flex items-center gap-2">
-          <span class="text-accent-lime">🚀</span> Featured Research & Projects
+        <h2 class="section-head text-lg sm:text-xl mb-4 flex items-center gap-2 text-white">
+          <span aria-hidden="true">🚀</span> Featured Research & Projects
         </h2>
         <div class="grid gap-4 sm:grid-cols-2">
           <!-- SBUnix -->
-          <article class="hover-lift group rounded-xl border-2 border-muted-gray/30 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-accent-amber/50 hover:shadow-[0_0_30px_-8px_rgba(251,191,36,0.2)] transition-all duration-300">
-            <h3 class="text-base sm:text-lg font-display font-bold text-accent-amber mb-2">
-              <a href="https://compas.cs.stonybrook.edu/cse506-v3" target="_blank" rel="noopener noreferrer" class="hover:underline">
+          <article class="hover-lift group rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-terminal-green/40 hover:shadow-[0_0_20px_-6px_rgba(78,201,176,0.15)] transition-all duration-300">
+            <h3 class="text-base sm:text-lg font-display font-bold text-white mb-1.5">
+              <a href="https://compas.cs.stonybrook.edu/cse506-v3" target="_blank" rel="noopener noreferrer" class="hover:text-terminal-green transition-colors">
                 SBUnix — Coming Soon
               </a>
             </h3>
-            <p class="text-xs text-accent-amber/90 mb-2 font-medium">Full Unix-like OS from scratch</p>
-            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Kernel, file system (TARFS), virtual memory, preemptive scheduling, COW fork(), user-mode processes (ring 3). Shell (SBUsh), init, syscalls (fork, execve, pipe), libc (sblibc). C + assembly.</p>
+            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Full Unix-like OS from scratch. Kernel, TARFS, virtual memory, preemptive scheduling, COW fork(), ring 3. SBUsh, init, syscalls, sblibc. C + assembly.</p>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/40">C</span>
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-tag-amber/20 text-tag-amber border border-tag-amber/40">Assembly</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">C</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Assembly</span>
             </div>
           </article>
 
           <!-- User-Space Networking -->
-          <article class="hover-lift group rounded-xl border-2 border-muted-gray/30 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-cpp-blue/50 hover:shadow-[0_0_30px_-8px_rgba(86,156,214,0.25)] transition-all duration-300">
-            <h3 class="text-base sm:text-lg font-display font-bold text-cpp-blue mb-2">
-              <a href="https://github.com/angad-singh97/riscv-network-stack" target="_blank" rel="noopener noreferrer" class="hover:underline">
+          <article class="hover-lift group rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-terminal-green/40 hover:shadow-[0_0_20px_-6px_rgba(78,201,176,0.15)] transition-all duration-300">
+            <h3 class="text-base sm:text-lg font-display font-bold text-white mb-1.5">
+              <a href="https://github.com/angad-singh97/riscv-network-stack" target="_blank" rel="noopener noreferrer" class="hover:text-terminal-green transition-colors">
                 User-Space Networking on RISC-V
               </a>
             </h3>
-            <p class="text-xs text-cpp-blue/90 mb-2 font-medium">DPDK + F-Stack on RISC-V FPGA</p>
-            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Custom PMD for a proprietary NIC. Solved hardware race from RISC-V weak memory model with assembly <code class="text-terminal-green px-1 rounded bg-charcoal">FENCE</code>s. Zero-copy DMA via Hugepages and vfio-platform.</p>
+            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Custom PMD for a proprietary NIC. Solved RISC-V weak-memory race with assembly <code class="text-terminal-green px-1 rounded bg-charcoal">FENCE</code>s. Zero-copy DMA via Hugepages, vfio-platform.</p>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/40">C</span>
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-terminal-green/20 text-terminal-green border border-terminal-green/40">RISC-V</span>
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-tag-amber/20 text-tag-amber border border-tag-amber/40">DPDK</span>
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-tag-purple/20 text-tag-purple border border-tag-purple/40">F-Stack</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">C</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">RISC-V</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">DPDK</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">F-Stack</span>
             </div>
           </article>
 
           <!-- 5-Stage RISC-V -->
-          <article class="hover-lift group rounded-xl border-2 border-muted-gray/30 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-tag-orange/50 hover:shadow-[0_0_30px_-8px_rgba(206,145,120,0.25)] transition-all duration-300">
-            <h3 class="text-base sm:text-lg font-display font-bold text-tag-orange mb-2">
-              <a href="https://github.com/angad-singh97/riscv-core-verilog" target="_blank" rel="noopener noreferrer" class="hover:underline">
+          <article class="hover-lift group rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-terminal-green/40 hover:shadow-[0_0_20px_-6px_rgba(78,201,176,0.15)] transition-all duration-300">
+            <h3 class="text-base sm:text-lg font-display font-bold text-white mb-1.5">
+              <a href="https://github.com/angad-singh97/riscv-core-verilog" target="_blank" rel="noopener noreferrer" class="hover:text-terminal-green transition-colors">
                 5-Stage Pipelined RISC-V Core
               </a>
             </h3>
-            <p class="text-xs text-tag-orange/90 mb-2 font-medium">RV64IM, 5-stage pipeline</p>
-            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Data Forwarding Unit for RAW hazards without stalling. 2-bit dynamic branch predictor. 2-way set-associative cache (write-back, write-allocate).</p>
+            <p class="text-sm text-muted-gray-light mb-2 leading-snug">RV64IM, 5-stage pipeline. Data Forwarding for RAW hazards, 2-bit branch predictor, 2-way set-associative cache (write-back, write-allocate).</p>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-tag-orange/20 text-tag-orange border border-tag-orange/40">SystemVerilog</span>
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-tag-purple/20 text-tag-purple border border-tag-purple/40">Verilator</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">SystemVerilog</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Verilator</span>
             </div>
           </article>
 
           <!-- LuigiDB -->
-          <article class="hover-lift group rounded-xl border-2 border-muted-gray/30 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-terminal-green/50 hover:shadow-[0_0_30px_-8px_rgba(78,201,176,0.25)] transition-all duration-300">
-            <h3 class="text-base sm:text-lg font-display font-bold text-terminal-green mb-2">
-              <a href="https://github.com/angad-singh97/luigi-db" target="_blank" rel="noopener noreferrer" class="hover:underline">
+          <article class="hover-lift group rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-terminal-green/40 hover:shadow-[0_0_20px_-6px_rgba(78,201,176,0.15)] transition-all duration-300">
+            <h3 class="text-base sm:text-lg font-display font-bold text-white mb-1.5">
+              <a href="https://github.com/angad-singh97/luigi-db" target="_blank" rel="noopener noreferrer" class="hover:text-terminal-green transition-colors">
                 LuigiDB — Geo-Distributed Transactions
               </a>
             </h3>
-            <p class="text-xs text-terminal-green/90 mb-2 font-medium">2-WRTT commit, 30–60× vs OCC</p>
-            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Timestamp-ordered execution. Built on Mako (OSDI'25). TPC-C on cloud with simulated network latency.</p>
+            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Timestamp-ordered execution, 2-WRTT commit; 30–60× vs OCC. Mako (OSDI'25). TPC-C on cloud with simulated latency.</p>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/40">C++</span>
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-terminal-green/20 text-terminal-green border border-terminal-green/40">Mako</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">C++</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Mako</span>
             </div>
           </article>
 
           <!-- Raft -->
-          <article class="hover-lift group rounded-xl border-2 border-muted-gray/30 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-accent-cyan/50 hover:shadow-[0_0_30px_-8px_rgba(34,211,238,0.25)] transition-all duration-300">
-            <h3 class="text-base sm:text-lg font-display font-bold text-accent-cyan mb-2">
-              <a href="https://github.com/angad-singh97/dslabs-cpp-angad-singh97" target="_blank" rel="noopener noreferrer" class="hover:underline">
+          <article class="hover-lift group rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-terminal-green/40 hover:shadow-[0_0_20px_-6px_rgba(78,201,176,0.15)] transition-all duration-300">
+            <h3 class="text-base sm:text-lg font-display font-bold text-white mb-1.5">
+              <a href="https://github.com/angad-singh97/dslabs-cpp-angad-singh97" target="_blank" rel="noopener noreferrer" class="hover:text-terminal-green transition-colors">
                 Raft Consensus in C++
               </a>
             </h3>
-            <p class="text-xs text-accent-cyan/90 mb-2 font-medium">Replicated state machine (6.824-style)</p>
-            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Leader election with randomized timeouts, log replication via AppendEntries, RPC handlers. Thread-safe state machine; all 8 correctness tests passing.</p>
+            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Replicated state machine (6.824-style). Leader election, AppendEntries, RPC handlers. All 8 correctness tests passing.</p>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/40">C++</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">C++</span>
             </div>
           </article>
 
           <!-- Paxos -->
-          <article class="hover-lift group rounded-xl border-2 border-muted-gray/30 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-tag-pink/50 hover:shadow-[0_0_30px_-8px_rgba(255,121,198,0.25)] transition-all duration-300">
-            <h3 class="text-base sm:text-lg font-display font-bold text-tag-pink mb-2">
-              <a href="https://github.com/angad-singh97/paxos" target="_blank" rel="noopener noreferrer" class="hover:underline">
+          <article class="hover-lift group rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 sm:p-5 backdrop-blur-sm hover:border-terminal-green/40 hover:shadow-[0_0_20px_-6px_rgba(78,201,176,0.15)] transition-all duration-300">
+            <h3 class="text-base sm:text-lg font-display font-bold text-white mb-1.5">
+              <a href="https://github.com/angad-singh97/paxos" target="_blank" rel="noopener noreferrer" class="hover:text-terminal-green transition-colors">
                 Paxos-Based Distributed Transaction System
               </a>
             </h3>
-            <p class="text-xs text-tag-pink/90 mb-2 font-medium">Fault-tolerant distributed bank, Multi-Paxos over gRPC</p>
-            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Prepare/Promise with ballot codes; async consensus via CompletableFuture and gRPC; catch-up for lagging nodes. Java, Spring Boot, Protobuf.</p>
+            <p class="text-sm text-muted-gray-light mb-2 leading-snug">Fault-tolerant distributed bank, Multi-Paxos over gRPC. Prepare/Promise, CompletableFuture, catch-up for lagging nodes. Java, Spring Boot, Protobuf.</p>
             <div class="flex flex-wrap gap-1.5">
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-tag-pink/20 text-tag-pink border border-tag-pink/40">Java</span>
-              <span class="text-xs px-2 py-0.5 rounded-lg bg-tag-purple/20 text-tag-purple border border-tag-purple/40">gRPC</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">Java</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/30 text-muted-gray-light border border-muted-gray/40">gRPC</span>
             </div>
           </article>
         </div>
@@ -190,15 +196,15 @@ const profileImg = '/angad.png?v=' + Date.now();
 
       <!-- Professional Experience -->
       <section class="mb-10 sm:mb-12 animate-in-up animate-delay-4">
-        <h2 class="section-head text-lg sm:text-xl mb-4 flex items-center gap-2">
-          <span class="text-accent-coral">💼</span> Professional Experience
+        <h2 class="section-head text-lg sm:text-xl mb-4 flex items-center gap-2 text-white">
+          <span aria-hidden="true">💼</span> Professional Experience
         </h2>
         <div class="space-y-4">
-          <div class="rounded-xl border-2 border-accent-coral/20 bg-charcoal-card/80 p-4 backdrop-blur-sm">
+          <div class="rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 backdrop-blur-sm">
             <h3 class="font-display font-bold text-white text-base mb-1">Veolia North America</h3>
             <p class="text-sm text-muted-gray-light">Building scalable cloud observability infrastructure (AWS / Java).</p>
           </div>
-          <div class="rounded-xl border-2 border-muted-gray/30 bg-charcoal-card/80 p-4 backdrop-blur-sm">
+          <div class="rounded-xl border border-muted-gray/35 bg-charcoal-card/80 p-4 backdrop-blur-sm">
             <h3 class="font-display font-bold text-white text-base mb-1">Volante Technologies</h3>
             <p class="text-sm text-muted-gray-light">Ex-Senior Software Engineer. Architected low-latency payment engines and led migration to Java 17.</p>
           </div>
@@ -207,11 +213,11 @@ const profileImg = '/angad.png?v=' + Date.now();
 
       <!-- Deep Dives + Footer -->
       <section class="animate-in-up animate-delay-5">
-        <h2 class="section-head text-lg sm:text-xl mb-2 flex items-center gap-2">
-          <span class="text-accent-violet">📜</span> Deep Dives
+        <h2 class="section-head text-lg sm:text-xl mb-2 flex items-center gap-2 text-white">
+          <span aria-hidden="true">📜</span> Deep Dives
         </h2>
         <p class="text-sm text-muted-gray-light mb-4">Technical write-ups on systems, memory models, and low-level engineering.</p>
-        <a href="/blog" class="btn-pop inline-flex items-center gap-2 px-4 py-3 rounded-xl border-2 border-accent-violet/40 bg-accent-violet/10 text-accent-violet hover:bg-accent-violet/20 hover:border-accent-violet min-h-touch sm:min-h-0">
+        <a href="/blog" class="btn-pop inline-flex items-center gap-2 px-4 py-3 rounded-lg border border-terminal-green/40 bg-terminal-green/10 text-terminal-green hover:bg-terminal-green/20 hover:border-terminal-green/60 min-h-touch sm:min-h-0">
           Read the blog →
         </a>
         <footer class="mt-10 pt-6 border-t border-muted-gray/30 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-gray-light">

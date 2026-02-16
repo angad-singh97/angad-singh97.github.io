@@ -17,12 +17,12 @@
   }
 }
 
-/* Gradient mesh background */
+/* Gradient mesh background — subtle */
 .bg-mesh {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(78, 201, 176, 0.12), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(167, 139, 250, 0.08), transparent),
-    radial-gradient(ellipse 60% 40% at 0% 60%, rgba(34, 211, 238, 0.06), transparent),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(78, 201, 176, 0.05), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(78, 201, 176, 0.03), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 60%, rgba(78, 201, 176, 0.03), transparent),
     #0f0f12;
 }
 
