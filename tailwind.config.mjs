@@ -23,6 +23,16 @@ export default {
           violet: '#a78bfa',
           amber: '#fbbf24',
         },
+        pastel: {
+          blue: '#93c5fd',
+          mint: '#99f6e4',
+          lavender: '#c4b5fd',
+          peach: '#fdba74',
+          rose: '#f9a8d4',
+          cyan: '#67e8f9',
+          amber: '#fde68a',
+          green: '#86efac',
+        },
       },
       fontFamily: {
         mono: ['JetBrains Mono', 'Fira Code', 'ui-monospace', 'monospace'],
