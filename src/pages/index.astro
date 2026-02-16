@@ -22,33 +22,36 @@ IF → ID → EX → MEM → WB
 branch.predict();</pre>
     </div>
 
-    <div class="relative max-w-4xl mx-auto px-6 py-16 sm:py-24 lg:px-12">
+    <div class="relative max-w-4xl mx-auto px-6 py-8 sm:py-12 lg:px-12">
     <!-- Hero -->
-    <section class="mb-16 flex flex-col sm:flex-row sm:items-start gap-8">
-      <div class="flex-shrink-0">
+    <section class="mb-8 flex flex-col sm:flex-row sm:items-start gap-6">
+      <div class="flex-shrink-0 animate-in-up animate-delay-1">
         <img
           src="/angad.png"
           alt="Angad Singh"
           width="160"
           height="213"
-          class="rounded-lg border border-muted-gray/30 w-40 h-auto object-cover"
+          class="photo-fun rounded-lg border border-muted-gray/30 w-36 h-auto object-cover"
         />
       </div>
       <div class="flex-1 min-w-0">
-      <h1 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
+      <h1 class="animate-in-up animate-delay-2 text-2xl sm:text-3xl font-bold text-white tracking-tight mb-2">
         Angad Singh <span class="text-muted-gray">|</span> Systems Engineer
       </h1>
-      <p class="text-lg text-muted-gray-light leading-relaxed max-w-2xl">
+      <p class="animate-in-up animate-delay-3 text-base text-muted-gray-light leading-snug max-w-2xl">
         Systems Engineer specializing in High-Performance Networking and Kernel Bypass. Combining deep academic research in DPDK/RISC-V with 4+ years of industry experience.
+      </p>
+      <p class="animate-in-up animate-delay-3 text-sm text-muted-gray opacity-80 italic max-w-2xl mt-0.5">
+        I make packets go brrr.
       </p>
 
       <!-- Quick Links -->
-      <div class="flex flex-wrap gap-4 mt-8">
+      <div class="flex flex-wrap gap-3 mt-4 animate-in-up animate-delay-4">
         <a
           href="https://github.com/angad-singh97"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded border border-muted-gray/50 hover:border-terminal-green/50 hover:text-terminal-green transition-colors"
+          class="btn-pop inline-flex items-center gap-2 px-4 py-2 rounded border border-muted-gray/50 hover:border-terminal-green/50 hover:text-terminal-green transition-colors"
           aria-label="GitHub"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
@@ -58,7 +61,7 @@ branch.predict();</pre>
           href="https://linkedin.com/in/angad-sde-nyc"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded border border-muted-gray/50 hover:border-terminal-green/50 hover:text-terminal-green transition-colors"
+          class="btn-pop inline-flex items-center gap-2 px-4 py-2 rounded border border-muted-gray/50 hover:border-terminal-green/50 hover:text-terminal-green transition-colors"
           aria-label="LinkedIn"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
@@ -67,7 +70,7 @@ branch.predict();</pre>
         <a
           href="/resume.pdf"
           download
-          class="inline-flex items-center gap-2 px-4 py-2 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30 hover:bg-terminal-green/30 transition-colors"
+          class="btn-pop inline-flex items-center gap-2 px-4 py-2 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30 hover:bg-terminal-green/30 transition-colors"
           aria-label="Download Resume"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
@@ -78,67 +81,67 @@ branch.predict();</pre>
     </section>
 
     <!-- Projects -->
-    <section class="mb-20">
-      <h2 class="text-xl font-semibold text-white mb-6 tracking-tight">Featured Projects</h2>
-      <div class="grid gap-6 sm:grid-cols-1">
+    <section class="mb-8 animate-in-up animate-delay-5">
+      <h2 class="text-lg font-semibold text-white mb-4 tracking-tight">Featured Projects</h2>
+      <div class="grid gap-4 sm:grid-cols-2">
         <!-- User-Space Networking -->
-        <article class="group p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/50 hover:shadow-[0_0_24px_-4px_rgba(86,156,214,0.15)] transition-all duration-300">
-          <h3 class="text-lg font-semibold text-cpp-blue mb-2">
+        <article class="hover-lift group p-4 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/50 hover:shadow-[0_0_24px_-4px_rgba(86,156,214,0.25)] transition-all duration-300">
+          <h3 class="text-base font-semibold text-cpp-blue mb-1.5">
             <a href="https://github.com/angad-singh97/riscv-network-stack" target="_blank" rel="noopener noreferrer" class="hover:underline">
               User-Space Networking on RISC-V
             </a>
           </h3>
-          <p class="text-sm text-muted-gray-light mb-3">
+          <p class="text-sm text-muted-gray-light mb-2 leading-snug">
             Custom DPDK Poll Mode Driver (PMD) for a proprietary FPGA NIC. Resolved critical race conditions on RISC-V's weak memory model by injecting assembly <code class="text-terminal-green px-1 rounded bg-charcoal">FENCE</code> instructions. Zero-copy DMA via Hugepages and vfio-platform.
           </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs px-2.5 py-1 rounded bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/30">C</span>
-            <span class="text-xs px-2.5 py-1 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30">RISC-V</span>
-            <span class="text-xs px-2.5 py-1 rounded bg-tag-amber/20 text-tag-amber border border-tag-amber/30">DPDK</span>
-            <span class="text-xs px-2.5 py-1 rounded bg-tag-purple/20 text-tag-purple border border-tag-purple/30">F-Stack</span>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-0.5 rounded bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/30">C</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30">RISC-V</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-tag-amber/20 text-tag-amber border border-tag-amber/30">DPDK</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-tag-purple/20 text-tag-purple border border-tag-purple/30">F-Stack</span>
           </div>
         </article>
 
         <!-- RV64IM CPU -->
-        <article class="group p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-tag-orange/50 hover:shadow-[0_0_24px_-4px_rgba(206,145,120,0.15)] transition-all duration-300">
-          <h3 class="text-lg font-semibold text-cpp-blue mb-2">
+        <article class="hover-lift group p-4 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-tag-orange/50 hover:shadow-[0_0_24px_-4px_rgba(206,145,120,0.25)] transition-all duration-300">
+          <h3 class="text-base font-semibold text-cpp-blue mb-1.5">
             <a href="https://github.com/angad-singh97/riscv-core-verilog" target="_blank" rel="noopener noreferrer" class="hover:underline">
               5-Stage RISC-V CPU (RV64IM)
             </a>
           </h3>
-          <p class="text-sm text-muted-gray-light mb-3">
+          <p class="text-sm text-muted-gray-light mb-2 leading-snug">
             Full RV64IM implementation with 5-stage pipeline. Data Forwarding Unit for RAW hazard resolution without stalling. 2-bit dynamic branch predictor to minimize control penalties. 2-way set-associative cache (write-back, write-allocate).
           </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs px-2.5 py-1 rounded bg-tag-orange/20 text-tag-orange border border-tag-orange/30">SystemVerilog</span>
-            <span class="text-xs px-2.5 py-1 rounded bg-tag-purple/20 text-tag-purple border border-tag-purple/30">Verilator</span>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-0.5 rounded bg-tag-orange/20 text-tag-orange border border-tag-orange/30">SystemVerilog</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-tag-purple/20 text-tag-purple border border-tag-purple/30">Verilator</span>
           </div>
         </article>
 
         <!-- LuigiDB -->
-        <article class="group p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-terminal-green/50 hover:shadow-[0_0_24px_-4px_rgba(78,201,176,0.15)] transition-all duration-300">
-          <h3 class="text-lg font-semibold text-cpp-blue mb-2">
+        <article class="hover-lift group p-4 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-terminal-green/50 hover:shadow-[0_0_24px_-4px_rgba(78,201,176,0.25)] transition-all duration-300">
+          <h3 class="text-base font-semibold text-cpp-blue mb-1.5">
             <a href="https://github.com/angad-singh97/luigi-db" target="_blank" rel="noopener noreferrer" class="hover:underline">
               LuigiDB — Geo-Distributed Transactions
             </a>
           </h3>
-          <p class="text-sm text-muted-gray-light mb-3">
+          <p class="text-sm text-muted-gray-light mb-2 leading-snug">
             Timestamp-ordered execution with a 2-WRTT commit bound. 30–60× higher throughput than OCC in multi-shard geo setups. Built on Mako (OSDI'25). TPC-C benchmarks on cloud infrastructure with simulated network latency.
           </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs px-2.5 py-1 rounded bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/30">C++</span>
-            <span class="text-xs px-2.5 py-1 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30">Mako</span>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-0.5 rounded bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/30">C++</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30">Mako</span>
           </div>
         </article>
 
         <!-- Raft & Paxos (from GitHub) -->
-        <article class="group p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-tag-pink/50 hover:shadow-[0_0_24px_-4px_rgba(255,121,198,0.15)] transition-all duration-300">
-          <h3 class="text-lg font-semibold text-cpp-blue mb-2">
+        <article class="hover-lift group p-4 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-tag-pink/50 hover:shadow-[0_0_24px_-4px_rgba(255,121,198,0.25)] transition-all duration-300">
+          <h3 class="text-base font-semibold text-cpp-blue mb-1.5">
             <a href="https://github.com/angad-singh97" target="_blank" rel="noopener noreferrer" class="hover:underline">
               More on GitHub
             </a>
           </h3>
-          <p class="text-sm text-muted-gray-light mb-3">
+          <p class="text-sm text-muted-gray-light mb-2 leading-snug">
             Raft consensus in C++, Paxos-based distributed transactions in Java, SBUnix (Unix-like OS) — and more. <a href="https://github.com/angad-singh97" class="text-terminal-green hover:underline">View all 25 repos</a>.
           </p>
         </article>
@@ -146,14 +149,14 @@ branch.predict();</pre>
     </section>
 
     <!-- Deep Dives CTA -->
-    <section>
-      <h2 class="text-xl font-semibold text-white mb-6 tracking-tight">Deep Dives</h2>
-      <p class="text-muted-gray-light mb-4">
+    <section class="animate-in-up animate-delay-6">
+      <h2 class="text-lg font-semibold text-white mb-2 tracking-tight">Deep Dives</h2>
+      <p class="text-sm text-muted-gray-light mb-3">
         Technical write-ups on systems, memory models, and low-level engineering.
       </p>
       <a
         href="/blog"
-        class="inline-flex items-center gap-2 px-4 py-2 rounded border border-terminal-green/30 bg-terminal-green/10 text-terminal-green hover:bg-terminal-green/20 hover:border-terminal-green/50 transition-colors"
+        class="btn-pop inline-flex items-center gap-2 px-4 py-2 rounded border border-terminal-green/30 bg-terminal-green/10 text-terminal-green hover:bg-terminal-green/20 hover:border-terminal-green/50 transition-colors"
       >
         Read the blog →
       </a>
