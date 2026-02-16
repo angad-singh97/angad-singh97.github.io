@@ -6,7 +6,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Angad Singh | Systems Engineer"
   description="Systems Engineer specializing in High-Performance Networking and Kernel Bypass. Combining deep academic research in DPDK/RISC-V with 4+ years of industry experience."
 >
-  <main class="max-w-3xl mx-auto px-6 py-16 sm:py-24">
+  <main class="relative min-h-screen">
+    <!-- Full-bleed background pattern for side space -->
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none" aria-hidden="true" />
+    <!-- Side decorations - terminal-style snippets -->
+    <div class="fixed left-4 top-1/4 hidden xl:block text-muted-gray/20 text-xs font-mono max-w-[180px] pointer-events-none select-none" aria-hidden="true">
+      <pre class="leading-relaxed">// user-space
+dpdk_pmd_init();
+fence(w, o);
+doorbell_write();</pre>
+    </div>
+    <div class="fixed right-4 top-1/3 hidden xl:block text-muted-gray/20 text-xs font-mono max-w-[180px] pointer-events-none select-none" aria-hidden="true">
+      <pre class="leading-relaxed">RV64IM pipeline:
+IF → ID → EX → MEM → WB
+branch.predict();</pre>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-6 py-16 sm:py-24 lg:px-12">
     <!-- Hero -->
     <section class="mb-16 flex flex-col sm:flex-row sm:items-start gap-8">
       <div class="flex-shrink-0">
@@ -66,7 +82,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 class="text-xl font-semibold text-white mb-6 tracking-tight">Featured Projects</h2>
       <div class="grid gap-6 sm:grid-cols-1">
         <!-- User-Space Networking -->
-        <article class="p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/30 transition-colors">
+        <article class="group p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/50 hover:shadow-[0_0_24px_-4px_rgba(86,156,214,0.15)] transition-all duration-300">
           <h3 class="text-lg font-semibold text-cpp-blue mb-2">
             <a href="https://github.com/angad-singh97/riscv-network-stack" target="_blank" rel="noopener noreferrer" class="hover:underline">
               User-Space Networking on RISC-V
@@ -76,15 +92,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Custom DPDK Poll Mode Driver (PMD) for a proprietary FPGA NIC. Resolved critical race conditions on RISC-V's weak memory model by injecting assembly <code class="text-terminal-green px-1 rounded bg-charcoal">FENCE</code> instructions. Zero-copy DMA via Hugepages and vfio-platform.
           </p>
           <div class="flex flex-wrap gap-2">
-            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">C</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">RISC-V</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">DPDK</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">F-Stack</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/30">C</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30">RISC-V</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-tag-amber/20 text-tag-amber border border-tag-amber/30">DPDK</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-tag-purple/20 text-tag-purple border border-tag-purple/30">F-Stack</span>
           </div>
         </article>
 
         <!-- RV64IM CPU -->
-        <article class="p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/30 transition-colors">
+        <article class="group p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-tag-orange/50 hover:shadow-[0_0_24px_-4px_rgba(206,145,120,0.15)] transition-all duration-300">
           <h3 class="text-lg font-semibold text-cpp-blue mb-2">
             <a href="https://github.com/angad-singh97/riscv-core-verilog" target="_blank" rel="noopener noreferrer" class="hover:underline">
               5-Stage RISC-V CPU (RV64IM)
@@ -94,13 +110,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Full RV64IM implementation with 5-stage pipeline. Data Forwarding Unit for RAW hazard resolution without stalling. 2-bit dynamic branch predictor to minimize control penalties. 2-way set-associative cache (write-back, write-allocate).
           </p>
           <div class="flex flex-wrap gap-2">
-            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">SystemVerilog</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">Verilator</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-tag-orange/20 text-tag-orange border border-tag-orange/30">SystemVerilog</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-tag-purple/20 text-tag-purple border border-tag-purple/30">Verilator</span>
           </div>
         </article>
 
         <!-- LuigiDB -->
-        <article class="p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/30 transition-colors">
+        <article class="group p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-terminal-green/50 hover:shadow-[0_0_24px_-4px_rgba(78,201,176,0.15)] transition-all duration-300">
           <h3 class="text-lg font-semibold text-cpp-blue mb-2">
             <a href="https://github.com/angad-singh97/luigi-db" target="_blank" rel="noopener noreferrer" class="hover:underline">
               LuigiDB — Geo-Distributed Transactions
@@ -110,13 +126,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Timestamp-ordered execution with a 2-WRTT commit bound. 30–60× higher throughput than OCC in multi-shard geo setups. Built on Mako (OSDI'25). TPC-C benchmarks on cloud infrastructure with simulated network latency.
           </p>
           <div class="flex flex-wrap gap-2">
-            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">C++</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-muted-gray/20 text-muted-gray">Mako</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-cpp-blue/20 text-cpp-blue border border-cpp-blue/30">C++</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-terminal-green/20 text-terminal-green border border-terminal-green/30">Mako</span>
           </div>
         </article>
 
         <!-- Raft & Paxos (from GitHub) -->
-        <article class="p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-cpp-blue/30 transition-colors">
+        <article class="group p-5 rounded-lg border border-muted-gray/30 bg-charcoal-light/50 hover:border-tag-pink/50 hover:shadow-[0_0_24px_-4px_rgba(255,121,198,0.15)] transition-all duration-300">
           <h3 class="text-lg font-semibold text-cpp-blue mb-2">
             <a href="https://github.com/angad-singh97" target="_blank" rel="noopener noreferrer" class="hover:underline">
               More on GitHub
@@ -137,10 +153,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
       <a
         href="/blog"
-        class="inline-flex items-center gap-2 text-terminal-green hover:underline"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded border border-terminal-green/30 bg-terminal-green/10 text-terminal-green hover:bg-terminal-green/20 hover:border-terminal-green/50 transition-colors"
       >
         Read the blog →
       </a>
     </section>
+    </div>
   </main>
 </BaseLayout>

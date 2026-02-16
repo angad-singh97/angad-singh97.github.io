@@ -14,6 +14,14 @@
   }
 }
 
+/* Background grid pattern for side space */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(78, 201, 176, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 201, 176, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 /* KaTeX overrides for dark theme */
 .katex {
   font-size: 1.1em !important;
