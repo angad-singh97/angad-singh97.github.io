@@ -25,18 +25,27 @@ branch.predict();</pre>
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10 lg:max-w-6xl lg:px-10 xl:max-w-7xl xl:px-12 pt-[env(safe-area-inset-top)]">
       <!-- Hero: image left, text wraps next to it on all sizes -->
       <section class="mb-10 sm:mb-12 flex flex-row items-start gap-4 sm:gap-6 animate-in-up animate-delay-1">
-        <div class="flex-shrink-0">
-          <img
-            id="profile-photo"
-            src={profileImg}
-            alt="Angad Singh"
-            width="160"
-            height="213"
-            class="photo-fun rounded-xl border border-muted-gray/40 w-24 h-auto object-cover sm:w-36 cursor-pointer select-none"
-            tabindex="0"
-            role="button"
-            aria-label="Profile photo"
-          />
+        <div class="flex-shrink-0 photo-flip-wrap w-24 sm:w-36" id="profile-photo-wrap">
+          <div class="photo-flip-inner" id="profile-photo-flip">
+            <div class="photo-flip-front">
+              <img
+                src={profileImg}
+                alt="Angad Singh"
+                width="160"
+                height="213"
+                class="photo-fun rounded-xl border border-muted-gray/40 w-full h-auto object-cover"
+              />
+            </div>
+            <div class="photo-flip-back">
+              <img
+                src="/gohan.gif"
+                alt=""
+                width="160"
+                height="213"
+                class="rounded-xl border border-muted-gray/40 w-full h-auto object-cover object-top"
+              />
+            </div>
+          </div>
         </div>
         <div class="flex-1 min-w-0">
           <h1 class="font-display font-bold text-xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-1.5 sm:mb-2 animate-in-up animate-delay-2">
@@ -235,21 +244,15 @@ branch.predict();</pre>
         </footer>
       </section>
     </div>
-    <!-- Gohan Easter egg overlay (3 clicks on profile photo) -->
-    <div id="gohan-overlay" class="gohan-overlay" aria-hidden="true" hidden>
-      <div class="gohan-aura" />
-      <div class="gohan-beam" />
-      <div class="gohan-content">
-        <span class="gohan-text">GOHAN</span>
-        <span class="gohan-sub">— it's over 9000 —</span>
-      </div>
-    </div>
-
     <script is:inline>
       (function() {
-        var el = document.getElementById('profile-photo');
-        var overlay = document.getElementById('gohan-overlay');
-        if (!el || !overlay) return;
+        var wrap = document.getElementById('profile-photo-wrap');
+        var flip = document.getElementById('profile-photo-flip');
+        if (!wrap || !flip) return;
+        wrap.setAttribute('tabindex', '0');
+        wrap.setAttribute('role', 'button');
+        wrap.setAttribute('aria-label', 'Profile photo');
+        wrap.classList.add('cursor-pointer', 'select-none');
         var count = 0;
         var resetAt = 0;
         var RESET_MS = 1500;
@@ -260,16 +263,11 @@ branch.predict();</pre>
           resetAt = now + RESET_MS;
           if (count >= 3) {
             count = 0;
-            overlay.hidden = false;
-            overlay.classList.add('gohan-overlay--active');
-            setTimeout(function() {
-              overlay.classList.remove('gohan-overlay--active');
-              overlay.hidden = true;
-            }, 4200);
+            flip.classList.toggle('photo-flip-inner--flipped');
           }
         }
-        el.addEventListener('click', onClick);
-        el.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } });
+        wrap.addEventListener('click', onClick);
+        wrap.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } });
       })();
     </script>
   </main>
